@@ -1,3 +1,3 @@
 # QUIZ-APP
-Assignment
+Live URL :
 https://quizz09.netlify.app
