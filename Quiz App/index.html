@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link rel="stylesheet" href="style.css">
+
+</head>    
+<body>
+
+<div id="auth" class="box">
+  <h2>Signup</h2>
+
+  <div id="signupDiv">
+    <input id="name" placeholder="Full Name">
+    <input id="email" placeholder="Email">
+    <input id="password" placeholder="Password">
+    <button onclick="signup()">Signup</button>
+    <p onclick="toggle()">Already have account? Login</p>
+  </div>
+
+  <div id="loginDiv" class="hidden">
+    <input id="loginEmail" placeholder="Email">
+    <input id="loginPassword" placeholder="Password">
+    <button onclick="login()">Login</button>
+    <p onclick="toggle()">Create account</p>
+  </div>
+</div>
+
+
+<div id="dashboard" class="hidden">
+  <h2 id="username"></h2>
+  <button onclick="logout()">Logout</button>
+
+
+
+  <h1>Select Quiz</h1>
+
+  <div class="cards">
+    <div class="card">
+      <h3>HTML Quiz</h3>
+      <button onclick="startQuiz('html')">Start</button>
+    </div>
+    <div class="card">
+      <h3>CSS Quiz</h3>
+      <button onclick="startQuiz('css')">Start</button>
+    </div>
+    <div class="card">
+      <h3>JavaScript Quiz</h3>
+      <button onclick="startQuiz('js')">Start</button>
+    </div>
+  </div>
+</div>
+
+
+<div id="quiz" class="box hidden">
+  <div class="top">
+    <div id="progress"></div>
+    <div id="timer">15</div>
+  </div>
+
+  <h2 id="question"></h2>
+  <div id="options"></div>
+</div>
+
+
+
+<script src="app.js"></script>
+
+</body>
+</html>
